@@ -1,0 +1,17 @@
+name: Conditional Workflow Execution
+Objective: You were looking for implementation of GitHub runner and conditional execution. We 
+are going to look to proceed with execution only in case repository branch name matches master 
+branch. 
+Tools required: GitHub Actions
+Prerequisites: None
+ 
+on: [push]
+jobs:
+ production-deploy:
+ if: github.ref_name == 'master'
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v3
+ - uses: actions/setup-node@v3
+ with:
+ node-version: '14'
