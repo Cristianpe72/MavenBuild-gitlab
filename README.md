@@ -8,6 +8,7 @@ Artifact will be created in target folder.
 
 docker build -t mavenbuild .
 
+test for push
 
 Once this is done u will be see image using docker image
 
